@@ -5,6 +5,8 @@ struct Word: Identifiable, Hashable {
     let english: String
     let chinese: String
     let pronunciation: String
+    let audioURL: String?
+    let examples: [String]
     var isLearned: Bool = false
     var lastReviewDate: Date?
     

@@ -31,7 +31,7 @@ struct ContentView: View {
 }
 
 struct ReviewView: View {
-    @State private var currentWord: Word? = Word(english: "flip", chinese: "翻转", pronunciation: "flɪp")
+    @State private var currentWord: Word? = Word(english: "flip", chinese: "翻转", pronunciation: "flɪp", audioURL: nil, examples: ["Flip the pancake.", "The coin flip landed on heads."])
     
     var body: some View {
         VStack(spacing: 20) {
@@ -58,15 +58,6 @@ struct ReviewView: View {
             }
         }
         .padding()
-    }
-}
-
-struct WordSelectionView: View {
-    var body: some View {
-        NavigationView {
-            Text("选词页面")
-                .navigationTitle("选词")
-        }
     }
 }
 
